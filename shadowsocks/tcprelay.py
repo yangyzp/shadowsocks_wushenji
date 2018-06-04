@@ -1732,13 +1732,13 @@ class TCPRelay(object):
                     id, self.multi_user_table[id]['md5'])] = id
 
                 if 'node_speedlimit' not in self.multi_user_table[id]:
-                    bandwidth = max(
+                    bandwidth = min(
                         float(self.mu_bandwidth), float(0.00))
                 else:
                     if float(
                             self.mu_bandwidth) > 0.0 or float(
                             self.multi_user_table[id]['node_speedlimit']) * 128 > 0.0:
-                        bandwidth = max(
+                        bandwidth = min(
                             float(
                                 self.mu_bandwidth), float(
                                 self.multi_user_table[id]['node_speedlimit']) * 128)
@@ -2130,13 +2130,13 @@ class TCPRelay(object):
                     '_forbidden_portset'] = PortRange(str(""))
 
             if 'node_speedlimit' not in self.multi_user_table[id]:
-                bandwidth = max(
+                bandwidth = min(
                     float(self.mu_bandwidth), float(0.00))
             else:
                 if float(
                         self.mu_bandwidth) > 0.0 or float(
                         self.multi_user_table[id]['node_speedlimit']) * 128 > 0.0:
-                    bandwidth = max(
+                    bandwidth = min(
                         float(
                             self.mu_bandwidth), float(
                             self.multi_user_table[id]['node_speedlimit']) * 128)
