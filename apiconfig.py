@@ -21,7 +21,7 @@ WEBAPI_TOKEN = 'mupass622'
 MUDB_FILE = 'mudb.json'
 
 # Mysql
-MYSQL_HOST = '176.31.86.167'
+MYSQL_HOST = '198.50.215.190'
 MYSQL_PORT = 3306
 MYSQL_USER = 'sspanel'
 MYSQL_PASS = ''
