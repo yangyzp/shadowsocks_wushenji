@@ -101,22 +101,6 @@ def find_config():
     return None
 
 def find_custom_detect():
-    config_path = 'user-detect.html'
-    if os.path.exists(config_path):
-        return config_path
-    config_path = os.path.join(
-        os.path.dirname(__file__),
-        '../',
-        'user-detect.html')
-    if os.path.exists(config_path):
-        return config_path
-
-    config_path = 'detect.html'
-    if os.path.exists(config_path):
-        return config_path
-    config_path = os.path.join(os.path.dirname(__file__), '../', 'detect.html')
-    if os.path.exists(config_path):
-        return config_path
     return None
 
 
